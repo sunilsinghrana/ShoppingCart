@@ -1,12 +1,11 @@
-import { Container } from '@mui/material'
 import React from 'react'
-import Products from './Products'
+import Product from './Product'
 
 const Home = () => {
   return (
-    <Container>
-        <Products/>
-    </Container>
+    <>
+        <Product/>
+    </>
   )
 }
 

@@ -20,14 +20,14 @@ const carSlice = createSlice({
                   cartTotalQuantity: state.cartItems[itemIndex].cartTotalQuantity + 1,
                 };
                 toast.info('Increse Quantity by 1', {
-                    position: 'top-right'
+                    position: 'bottom-left'
                 })
 
             }else{
                 const tempProduct = {...action.payload,cartTotalQuantity: 1 };
                 state.cartItems.push(tempProduct)
                 toast.success('Added product successfully', {
-                    position: 'top-right'
+                    position: 'bottom-left'
                 })
             }
         },
@@ -40,7 +40,7 @@ const carSlice = createSlice({
               state.cartItems[itemIndex].cartTotalQuantity -= 1;
       
               toast.info("Decreased product quantity", {
-                position: "top-right",
+                position: "bottom-left",
               });
             } else if (state.cartItems[itemIndex].cartTotalQuantity === 1) {
               const nextCartItems = state.cartItems.filter(
@@ -50,7 +50,7 @@ const carSlice = createSlice({
               state.cartItems = nextCartItems;
       
               toast.error("Product removed from cart", {
-                position: "top-right",
+                position: "bottom-left",
               });
             }
                 },
@@ -64,7 +64,7 @@ const carSlice = createSlice({
                         state.cartItems = nextCartItem;
 
                         toast.error('removed product successfully', {
-                            position: 'top-right'
+                            position: 'bottom-left'
                         })
                 }
                 return state
