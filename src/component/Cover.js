@@ -3,7 +3,7 @@ import coverImage from '../images/cover-image.jpg'
 
 const Cover = () => {
   return (
-    <div className="hero h-96" style={{backgroundImage: `url(${coverImage})`}}>
+    <div className="hero h-[30rem]" style={{backgroundImage: `url(${coverImage})`}}>
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">

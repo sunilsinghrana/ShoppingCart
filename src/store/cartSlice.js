@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
+
 const initialState={
     cartItems: [],
     cartTotalQuantity: 0,
@@ -90,7 +91,7 @@ const carSlice = createSlice({
             state.cartTotalQuantity = quantity;
             state.cartTotalAmount = total;
           },
-    }
+    },
 })
 
 export const {addCart, removeCart, getTotals, decreaseCart} = carSlice.actions;
